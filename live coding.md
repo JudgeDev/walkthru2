@@ -195,4 +195,26 @@ close with Close and Shutdown (**Ctrl+Shift+Q**) or with Tabs > x
 **git add** notebook  # add to staging
 
 **git commit -m** 'Add sample notebook'  # commit to local repo
+
 **git push**  # pust to github
+
+Github > **Fork** > Create fork # create own copy > Clone to directory
+
+Amend
+
+git add, git commit, push
+
+Github > 
+
+**Fastai**:
+
+Fastai > Installing > copy install -c fastchan fastai
+
+mamba install -c fastchan fastai  # get from fastai channel
+
+mamba install -c fastchan fastbook  # get from fastai channel - includes fastai
+
+might need mamba install sencencepiece??
+
+
+
