@@ -1,6 +1,6 @@
-**Live Coding 1**
+## Live Coding 1
 
-**Terminal** and **Ubuntu**:
+### Terminal and Ubuntu
 
 Windows store > Windows terminal > Download > Run as administrator
 
@@ -14,7 +14,7 @@ python -> already got a version of python (system version)
 
 **pwd** -> /home/user – current directory
 
-Install **Mambaforge**:
+### Mambaforge
 
 github.com/conda-forge/miniforge > Mambaforge linux x86 installer> copy url
 
@@ -72,7 +72,7 @@ mamba install ipython
 
 ipython -> interactive terminal – **Ctrl+D** to close
 
-Install **PyTorch**:
+### PyTorch
 
 pytorch.org/get-started/locally > Stable/Linux/Conda/Python/ > copy install command
 
@@ -82,7 +82,7 @@ ipython, import torch, torch.+Tab (gives list of functions) – tensor(1)
 
 torch.cuda.is\_available(), torch.cuda.device\_count(), torch.cuda.get\_device\_name(0)
 
-Install **Jupyter**:
+### Jupyter
 
 mamba install jupyterlab  # don’t need condaforge channel
 
@@ -112,13 +112,13 @@ mamba install ipwidgets
 
 restart Juypter
 
-**Live Coding 2**
+## Live Coding 2
 
 don't normally need multiple users
 
 **sudo -u user -I**  # switch to user in interactive terminal
 
-**Github**:
+### Github
 
 github.com/user\_name/repository – github repository address
 
@@ -137,14 +137,13 @@ mkdir git, cd git, pwd -> /home/user/git
 (could clone with http, but can´t push)
 
 git config --global user.email "user", git config --global user.name "name"
-
 or .gitconfig > email = user, name = name
 
 **cd -**  # go back to most recently used directory
 
 **pushd** ..., **popd**  # go back to where you pushed
 
-**ssh keys**:
+### ssh keys
 
 **ssh -keygen**, Enter, Enter, Enter
 
@@ -154,7 +153,7 @@ Github > Profile > Settings > SSH and GPG keys > New SSH key > Title > paste key
 
 re-run git clone command -> clones into walkthru2
 
-**tmux** - terminal multiplexer:
+### tmux - terminal multiplexer:
 
 **sudo apt install** tmux  # system install
 
@@ -172,23 +171,23 @@ cd git - run jupyter for where the repos are, jl
 
 **Ctrl+B D**  # detach / tmux A  # reattch
 
-**Juypter**:
+### Juypter
 
 start Jupyter - jl (might need to zoom out to get complete server address to click on)
 
-Settings > Advanced Settings Editor (Ctrl+,) > Keyboard Shortcuts
+Juypter > Settings > Advanced Settings Editor (Ctrl+,) > Keyboard Shortcuts
 
 **M** / **Y**  # Markdown / Code
 
 Esc, **1**/**2**/**3**  # changes markdown header level
 
-\`to be styled as code\´
+`text`  # to be styled as code
 
 **sin **Shift+Tab**  # give parameters
 
 close with Close and Shutdown (**Ctrl+Shift+Q**) or with Tabs > x
 
-**Git**:
+### Git
 
 **git status**  # shows notebook as untracked
 
@@ -196,25 +195,28 @@ close with Close and Shutdown (**Ctrl+Shift+Q**) or with Tabs > x
 
 **git commit -m** 'Add sample notebook'  # commit to local repo
 
-**git push**  # pust to github
+**git push**  # push to github
 
-Github > **Fork** > Create fork # create own copy > Clone to directory
+**git pull**  # sync remote repo to origin
 
-Amend
+### Own copy of fastbook
 
-git add, git commit, push
+Github > **Fork** > Create fork # create own copy > Code > SSH > Copy url
 
-Github > 
+cd ~/git, git clone url
 
-**Fastai**:
+Juypter > fastbook > clean > 04_mnist > run cells -> no fastai
+
+After editing: git status, git -am 'Edit some stuff', git push  # save to fork
+
+Github > commits - to see commits since for > commit number - to see change
+
+### Fastai
 
 Fastai > Installing > copy install -c fastchan fastai
 
 mamba install -c fastchan fastai  # get from fastai channel
 
-mamba install -c fastchan fastbook  # get from fastai channel - includes fastai
+mamba install -c fastchan fastbook  # get from fastai channel - includes dependencies needed for the book
 
-might need mamba install sencencepiece??
-
-
-
+(might need mamba install -c fastchan fastbook sentencepiece)
